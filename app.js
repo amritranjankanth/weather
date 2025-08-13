@@ -23,16 +23,16 @@ async function checkweather(city){
     
         let x = data.weather[0].main;
         if(x == "Clouds"){
-            weathericon.src = "images/clouds.png"; 
+            weathericon.src = "photos/clouds.png"; 
         }
         else if(x== "Clear")
-         weathericon.src="images/clear.png";
+         weathericon.src="photos/clear.png";
         else if(x == "Rain")
-         weathericon.src = "images/rain.png";
+         weathericon.src = "photos/rain.png";
        else if(x == "Drizzle")
-        weathericon.src = "images/drizzle.png";
+        weathericon.src = "photos/drizzle.png";
         else if(x == "Mist")
-        weathericon.src = "images/mist.png";
+        weathericon.src = "photos/mist.png";
       
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";
@@ -43,4 +43,5 @@ async function checkweather(city){
 }
 searchbtn.addEventListener("click", () => {
     checkweather(searchbox.value);
+
 })
